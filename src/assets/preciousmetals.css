@@ -1,0 +1,118 @@
+:root {
+    --primary-bg: #ffffff;
+    --secondary-bg: #f8f9fa;
+    --tertiary-bg: #e9ecef;
+    --primary-color: #c92a2a;
+    --text-color: #212529;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .precious-metals-container {
+    padding: 30px;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    width: 90%;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    font-family: 'Segoe UI', sans-serif;
+    animation: fadeIn 1s ease;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 32px;
+    color: var(--text-color);
+    margin-bottom: 30px;
+  }
+  
+  .cards-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .metal-card {
+    background-color: var(--secondary-bg);
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 260px;
+    width: 300px;
+    box-shadow: 0 3px 6px var(--shadow-color);
+    transition: transform 0.3s ease;
+  }
+  
+  .metal-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--tertiary-bg);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+  }
+  
+  .metal-title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  .price-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+  }
+  
+  .label {
+    font-size: 16px;
+    color: #495057;
+  }
+  
+  .value {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  
+  /* Değişim Yüzdesi */
+  .change {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .up {
+    color: green;
+    animation: arrowUp 0.6s ease infinite alternate;
+  }
+  
+  .down {
+    color: red;
+    animation: arrowDown 0.6s ease infinite alternate;
+  }
+  
+  /* Animasyonlar */
+  @keyframes arrowUp {
+    from { transform: translateY(0); }
+    to { transform: translateY(-4px); }
+  }
+  
+  @keyframes arrowDown {
+    from { transform: translateY(0); }
+    to { transform: translateY(4px); }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 20px;
+    color: gray;
+  }
+  

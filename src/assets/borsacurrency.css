@@ -1,0 +1,73 @@
+.borsa-container {
+    padding: 20px;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin: 20px auto;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    color: var(--primary-color);
+  }
+  
+  .currency-table {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .currency-column {
+    width: 48%;
+  }
+  
+  .currency-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--secondary-bg);
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .currency-name {
+    font-weight: bold;
+    width: 60%;
+  }
+  
+  .currency-rate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 35%;
+    font-size: 18px;
+  }
+  
+  .currency-rate span {
+    margin-right: 5px;
+  }
+  
+  .up-arrow {
+    color: green;
+    font-size: 18px;
+  }
+  
+  .down-arrow {
+    color: red;
+    font-size: 18px;
+  }
+  
+  /* Loading text */
+  .loading {
+    text-align: center;
+    font-size: 18px;
+    color: #ccc;
+  }
+  
+  .currency-row:nth-child(odd) {
+    background-color: var(--tertiary-bg);
+  }
+  

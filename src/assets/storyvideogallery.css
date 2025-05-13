@@ -1,0 +1,116 @@
+.story-gallery {
+    padding: 40px 0;
+    background-color: var(--primary-bg);
+  }
+  
+  .story-circles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+    flex-wrap: nowrap; /* Tek satırda kal */
+    overflow-x: auto;  /* Taşarsa yana kaydırılabilir */
+  }
+  
+  .story-circle {
+    position: relative;
+    flex: 0 0 auto;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .story-circle::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, #ffd700, #fff2b2, #ffd700);
+    animation: spin-light 3s linear infinite;
+    z-index: -1;
+    filter: blur(5px);
+  }
+  
+  .story-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid gold;
+    animation: glow 2s infinite ease-in-out;
+    box-shadow: 0 0 15px rgba(186, 163, 82, 0.7);
+    transition: transform 0.3s;
+    overflow: hidden;
+  }
+  
+  .story-inner:hover {
+    transform: scale(1.1);
+  }
+  
+  .story-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    display: block;
+  }
+  
+  .story-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .story-video {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+  
+  /* Altın ışık animasyonu */
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 5px #baa352;
+    }
+    50% {
+      box-shadow: 0 0 20px #e1d2aa;
+    }
+    100% {
+      box-shadow: 0 0 5px #baa352;
+    }
+  }
+  
+  /* Dönen dış ışık efekti */
+  @keyframes spin-light {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Mobil uyumluluk */
+  @media (max-width: 768px) {
+    .story-circles {
+      flex-wrap: wrap;
+      justify-content: center;
+      overflow-x: unset;
+      padding: 0 10px;
+    }
+  
+    .story-circle {
+      width: 70px;
+      height: 70px;
+    }
+  }
+  

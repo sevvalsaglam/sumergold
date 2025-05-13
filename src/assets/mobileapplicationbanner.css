@@ -1,0 +1,13 @@
+.banner-img {
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+  }
+  
+  .banner-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 0;
+    animation: fadeInVideo 2s ease forwards;
+  }

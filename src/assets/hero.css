@@ -1,0 +1,23 @@
+.hero {
+    background-color: var(--primary-bg);
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* yeni ekleme: scroll taşmalarını önlemek için */
+  }
+  
+  
+  .hero-content h2 {
+    font-size: 3.5rem;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+    color: var(--accent);
+  }
+
+  
